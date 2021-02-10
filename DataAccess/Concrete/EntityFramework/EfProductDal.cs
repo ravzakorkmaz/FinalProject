@@ -16,6 +16,7 @@ namespace DataAccess.Concrete.EntityFramework
     {
         public List<ProductDetailDto> GetProductDetails()
         {
+            //using: cöp toplayiciyi bekleme, dispose et -> bellekten hizlica at
             using (NorthwindContext context = new NorthwindContext())
             {
                 var result = from p in context.Products
